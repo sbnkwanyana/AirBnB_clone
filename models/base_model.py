@@ -50,7 +50,7 @@ class BaseModel():
         self.updated_at = datetime.now()
         models.storage.save()
 
-    def to_dic(self):
+    def to_dict(self):
         """
         returns a dictionary containing all keys/values with
         addition of __class__ = class name
