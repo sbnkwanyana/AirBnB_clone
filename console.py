@@ -7,7 +7,6 @@ that is the entry point of the console application
 import cmd
 
 
-
 class HBNBCommand(cmd.Cmd):
     """
     Shell class prompts and accepts input from the a terminal and interprets
@@ -23,6 +22,7 @@ class HBNBCommand(cmd.Cmd):
     def do_quit(self, arg):
         "Quit command to exit the program"
         exit()
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
