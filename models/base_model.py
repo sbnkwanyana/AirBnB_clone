@@ -14,13 +14,22 @@ class BaseModel():
     all common attributes and functions of other classes
     """
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """
         initializes a new instance of BaseModel with a unique id
+        otherwise obtains initialization values from supplied argument
         """
-        self.id = str(uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        if kwargs:
+            for key, value in kwargs.items():
+                if key != "__class__":
+                    if key == "created_at" or key == "updated_at":
+                        self.__dict__[key] = datetime.fromisoformat(value)
+                    else:
+                        self.__dict__[key] = value
+        else:
+            self.id = str(uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
 
     def __str__(self):
         """
