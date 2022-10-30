@@ -5,10 +5,9 @@ that is the entry point of the console application
 """
 
 import cmd
-import shlex
 
 
-class Shell(cmd.Cmd):
+class HBNBCommand(cmd.Cmd):
     """
     Shell class prompts and accepts input from the a terminal and interprets
     the commands and runs the corresponding command
@@ -24,6 +23,5 @@ class Shell(cmd.Cmd):
         "Quits program"
         exit()
 
-
 if __name__ == "__main__":
-    Shell().cmdloop()
+    HBNBCommand().cmdloop()
