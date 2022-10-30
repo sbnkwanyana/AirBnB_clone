@@ -6,11 +6,15 @@ that is the entry point of the console application
 
 import cmd
 import shlex
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
 from models.base_model import BaseModel
 import models
 from models.user import User
 
-classes = {"BaseModel": BaseModel, "User": User}
+classes = {"BaseModel": BaseModel, "User": User, "State": State, "City": City, "Place": Place, "Review": Review }
 
 
 class HBNBCommand(cmd.Cmd):
