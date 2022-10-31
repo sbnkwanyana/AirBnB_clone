@@ -14,11 +14,11 @@ class TestBaseModel(unittest.TestCase):
     """
 
     @classmethod
-    def setUp(self):
+    def setUp(cls):
         """
         Used to set up test case attributes
         """
-        self.base_model = BaseModel()
+        cls.base_model = BaseModel()
 
     def test_id_str(self):
         """
@@ -27,8 +27,8 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(type(self.base_model.id), str)
 
     @classmethod
-    def tearDown(self):
+    def tearDown(cls):
         """
         used to discard test case attributes
         """
-        del self.base_model
+        del cls.base_model
