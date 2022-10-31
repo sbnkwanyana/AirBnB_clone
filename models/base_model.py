@@ -37,7 +37,7 @@ class BaseModel():
         """
         Prints object in the format [<class name>] (<self.id>) <self.__dict__>
         """
-        print(
+        return (
           "[{0}] ({1}) {2}"
           .format(self.__class__.__name__, self.id, self.__dict__)
           )
