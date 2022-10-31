@@ -14,7 +14,14 @@ from models.base_model import BaseModel
 import models
 from models.user import User
 
-classes = {"BaseModel": BaseModel, "User": User, "State": State, "City": City, "Place": Place, "Review": Review }
+classes = {
+    "BaseModel": BaseModel,
+    "User": User,
+    "State": State,
+    "City": City,
+    "Place": Place,
+    "Review": Review
+    }
 
 
 class HBNBCommand(cmd.Cmd):
