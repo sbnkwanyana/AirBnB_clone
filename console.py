@@ -11,6 +11,7 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 from models.base_model import BaseModel
+from models.amenity import Amenity
 import models
 from models.user import User
 
@@ -20,7 +21,8 @@ classes = {
     "State": State,
     "City": City,
     "Place": Place,
-    "Review": Review
+    "Review": Review,
+    "Aamenity": Amenity
     }
 
 
