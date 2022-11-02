@@ -22,7 +22,7 @@ classes = {
     "City": City,
     "Place": Place,
     "Review": Review,
-    "Aamenity": Amenity
+    "Amenity": Amenity
     }
 
 
@@ -118,7 +118,7 @@ class HBNBCommand(cmd.Cmd):
             dic = models.storage.all()
         else:
             if command[0] in classes:
-                dic = models.storage.all()
+                dic = models.storage.all(classes[command[0]])
             else:
                 print("** class doesn't exist **")
                 return
